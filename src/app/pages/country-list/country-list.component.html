@@ -1,0 +1,5 @@
+<ul>
+  <li *ngFor="let country of countries$ | async">
+    {{ country.name }} <img [src]="country.flags" alt="flag" />
+  </li>
+</ul>
