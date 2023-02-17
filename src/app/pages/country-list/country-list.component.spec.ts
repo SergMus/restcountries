@@ -1,4 +1,6 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpCountryService } from 'src/app/services/http-country.service';
 
 import { CountryListComponent } from './country-list.component';
 
@@ -8,9 +10,10 @@ describe('CountryListComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CountryListComponent ]
-    })
-    .compileComponents();
+      declarations: [CountryListComponent],
+      imports: [HttpClientTestingModule],
+      providers: [HttpCountryService],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(CountryListComponent);
     component = fixture.componentInstance;

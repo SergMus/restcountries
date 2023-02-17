@@ -1,10 +1,35 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './pages/home/home.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: '',
+    component: HomeComponent
+  },
+  {
+    path: 'list',
+    loadChildren: () =>
+      import('./pages/country-list/country-list.module').then(
+        (m) => m.CountryListModule
+      ),
+  },
+  {
+    path: 'country',
+    loadChildren: () =>
+      import('./pages/country/country.module').then((m) => m.CountryModule),
+  },
+  {
+    path: '**',
+    loadChildren: () =>
+      import('./pages/not-found/not-found.module').then(
+        (m) => m.NotFoundModule
+      ),
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
