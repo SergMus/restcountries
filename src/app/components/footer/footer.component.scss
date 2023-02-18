@@ -1,0 +1,32 @@
+@import "./../../../assets/styles/colors.scss";
+
+footer {
+  background-color: $bg-black;
+
+  .container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+
+  .copyright {
+    align-self: center;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 22px;
+    height: 22px;
+    text-align: center;
+    color: $primary-white;
+  }
+
+  .btn-wrapper {
+    position: absolute;
+    right: 0;
+  }
+}

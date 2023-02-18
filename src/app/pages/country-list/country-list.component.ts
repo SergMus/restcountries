@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Country } from 'src/app/interfaces/country';
-import { HttpCountryService } from 'src/app/services/http-country.service';
+import { ICountry } from 'src/app/shared/interfaces/country.interface';
+import { HttpCountryService } from 'src/app/shared/services/http-country.service';
 
 @Component({
   selector: 'app-country-list',
@@ -10,7 +10,7 @@ import { HttpCountryService } from 'src/app/services/http-country.service';
 })
 export class CountryListComponent implements OnInit {
   @Input() title = 'Europe';
-  public countries$?: Observable<Country[]>;
+  public countries$?: Observable<ICountry[]>;
 
   constructor(public httpCountryService: HttpCountryService) {}
 

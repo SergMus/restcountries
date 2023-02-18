@@ -1,0 +1,31 @@
+@import "./../../../assets/styles/colors.scss";
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  height: 250px;
+  color: $secondary-black;
+  background: url("./../../../assets/images/png/banner.png") no-repeat center/
+    cover;
+}
+
+summary {
+  text-align: center;
+
+  & > h1 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 10px;
+  }
+
+  & > p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}

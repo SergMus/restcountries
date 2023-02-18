@@ -1,1 +1,8 @@
-<router-outlet></router-outlet>
+<main>
+  <app-header></app-header>
+  <app-banner *ngIf="isVisible"></app-banner>
+  <article>
+    <router-outlet></router-outlet>
+  </article>
+  <app-footer></app-footer>
+</main>
