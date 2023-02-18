@@ -3,7 +3,7 @@ import {
   HttpTestingController,
 } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
-import { Country } from '../interfaces/country';
+import { ICountry } from '../interfaces/country.interface';
 import { COUNTRIES_MOCKS } from '../mocks/country.mocks';
 import { HttpCountryService } from './http-country.service';
 
@@ -26,7 +26,7 @@ describe('HttpCountryService', () => {
 
   it('should retrieve countries by region', () => {
     const region = 'europe';
-    const mockCountries: Country[] = COUNTRIES_MOCKS;
+    const mockCountries: ICountry[] = COUNTRIES_MOCKS;
 
     service.getCountriesByRegion(region).subscribe((countries) => {
       expect(countries.length).toBe(2);

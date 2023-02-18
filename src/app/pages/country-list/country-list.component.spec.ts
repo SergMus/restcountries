@@ -1,6 +1,6 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { HttpCountryService } from 'src/app/services/http-country.service';
+import { HttpCountryService } from 'src/app/shared/services/http-country.service';
 
 import { CountryListComponent } from './country-list.component';
 
