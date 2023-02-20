@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { IIcons } from 'src/app/shared/interfaces/icons.interface';
+import { IIcons } from 'src/app/shared/models/icons.interface';
 
 @Component({
   selector: 'app-arrow-icon',

@@ -1,0 +1,66 @@
+@import "./../../../assets/styles/colors.scss";
+
+.container {
+  padding: 30px 0;
+
+  .btn-box {
+    position: absolute;
+    left: 0;
+  }
+
+  ul {
+    height: 70vh;
+    margin-top: 20px;
+
+    .viewport {
+      contain: none;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 10px 20px 10px 0;
+      list-style: none;
+      border: 1px solid $border;
+      border-radius: 8px;
+      padding: 10px 20px;
+      cursor: pointer;
+
+      .image-box {
+        height: 90px;
+        width: 150px;
+        border: 1px solid $border;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          border: 1px solid $border;
+        }
+      }
+
+      span {
+        font-size: 24px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+// <------- Scrollbar ------->//
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $secondary-shadow;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $primary-violet;
+  height: 90px;
+}

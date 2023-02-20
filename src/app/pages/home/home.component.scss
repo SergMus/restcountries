@@ -1,0 +1,41 @@
+@import "./../../../assets/styles/colors.scss";
+
+nav {
+  padding: 20px 0;
+  ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px 20px;
+
+    li {
+      max-width: 320px;
+      width: 100%;
+      background: $primary-shadow;
+      border-radius: 14px;
+      border: 1px solid $border;
+      cursor: pointer;
+
+      figure {
+        img {
+          border-radius: 14px 14px 0 0;
+        }
+
+        figcaption {
+          text-align: center;
+          background: $primary-white;
+          box-shadow: 0px 6px 24px $secondary-shadow;
+          border-radius: 0px 0px 14px 14px;
+          font-weight: 600;
+          letter-spacing: 1.5px;
+        }
+
+        &:hover {
+          transition: 0.4s all;
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}

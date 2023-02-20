@@ -13,10 +13,8 @@ export class AppComponent implements OnInit {
   constructor(private location: Location) {}
 
   public ngOnInit(): void {
-    this.checkBannerVisibility();
-  }
-
-  public checkBannerVisibility(): void {
-    this.isVisible = this.location.isCurrentPathEqualTo('');
+    this.location.onUrlChange(() => {
+      this.isVisible = this.location.isCurrentPathEqualTo('');
+    });
   }
 }

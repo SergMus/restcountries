@@ -1,33 +1,9 @@
 <nav>
   <ul>
-    <li>
+    <li *ngFor="let region of regions" [routerLink]="['list', region.name]">
       <figure>
-        <img src="" alt="" />
-        <figcaption></figcaption>
-      </figure>
-    </li>
-    <li>
-      <figure>
-        <img src="" alt="" />
-        <figcaption></figcaption>
-      </figure>
-    </li>
-    <li>
-      <figure>
-        <img src="" alt="" />
-        <figcaption></figcaption>
-      </figure>
-    </li>
-    <li>
-      <figure>
-        <img src="" alt="" />
-        <figcaption></figcaption>
-      </figure>
-    </li>
-    <li>
-      <figure>
-        <img src="" alt="" />
-        <figcaption></figcaption>
+        <img [src]="region.icon" [alt]="region.name" />
+        <figcaption>{{ region.name | titlecase }}</figcaption>
       </figure>
     </li>
   </ul>
