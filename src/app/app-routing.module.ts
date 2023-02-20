@@ -8,7 +8,7 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'list',
+    path: 'list/:name',
     loadChildren: () =>
       import('./pages/country-list/country-list.module').then(
         (m) => m.CountryListModule

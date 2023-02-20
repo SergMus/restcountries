@@ -13,4 +13,9 @@ button {
   &:first-child {
     margin-right: 8px;
   }
+
+  span {
+    margin-left: 4px;
+    font-weight: 500;
+  }
 }

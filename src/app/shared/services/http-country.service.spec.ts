@@ -3,7 +3,7 @@ import {
   HttpTestingController,
 } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
-import { ICountry } from '../interfaces/country.interface';
+import { ICountry } from '../models/country.interface';
 import { COUNTRIES_MOCKS } from '../mocks/country.mocks';
 import { HttpCountryService } from './http-country.service';
 

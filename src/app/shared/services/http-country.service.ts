@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { ICountry } from '../interfaces/country.interface';
+import { ICountry } from '../models/country.interface';
 
 @Injectable({
   providedIn: 'root',
