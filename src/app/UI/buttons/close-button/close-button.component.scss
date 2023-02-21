@@ -1,0 +1,9 @@
+@import "./../../../../assets/styles/button-reset";
+
+.close-button {
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}

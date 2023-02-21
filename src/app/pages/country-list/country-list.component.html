@@ -4,10 +4,12 @@
   </div>
   <h1>Region: {{ title | titlecase }}</h1>
   <ul>
-    <cdk-virtual-scroll-viewport itemSize="11" class="viewport">
+    <cdk-virtual-scroll-viewport [itemSize]="20" class="viewport">
       <ng-container *cdkVirtualFor="let country of countries$ | async">
-        <li>
-          <div class="image-box"><img [src]="country.flags" alt="flag" /></div>
+        <li (click)="navigateToCountry(country.name)">
+          <div class="image-box">
+            <img [src]="country.flags" [alt]="country.desc" />
+          </div>
           <span>{{ country.name }} </span>
         </li>
       </ng-container>

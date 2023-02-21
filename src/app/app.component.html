@@ -4,5 +4,6 @@
   <article>
     <router-outlet></router-outlet>
   </article>
-  <app-footer></app-footer>
+  <app-footer (onModalToggle)="toggle()"></app-footer>
+  <app-modal *ngIf="isModal" (isVisible)="toggle()"></app-modal>
 </main>

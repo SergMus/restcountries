@@ -1,1 +1,30 @@
-<p>country works!</p>
+<div class="container">
+  <div class="btn-box">
+    <app-back-button></app-back-button>
+  </div>
+  <div class="card" *ngFor="let props of country$ | async">
+    <h1 class="title">{{ props.name }}</h1>
+    <div class="header">
+      <div class="image-box">
+        <img [src]="props.flags" [alt]="props.flag" />
+      </div>
+      <h2>{{ props.cioc }}</h2>
+    </div>
+    <div class="content">
+      <ul>
+        <li>
+          <h3>Capital:</h3>
+          <span>{{ props.capital }}</span>
+        </li>
+        <li>
+          <h3>Currency:</h3>
+          <span>{{ props.currencies }}</span>
+        </li>
+        <li>
+          <h3>Population:</h3>
+          <span>{{ props.population | population }}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

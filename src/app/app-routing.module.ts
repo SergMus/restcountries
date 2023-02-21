@@ -5,7 +5,7 @@ import { HomeComponent } from './pages/home/home.component';
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    component: HomeComponent,
   },
   {
     path: 'list/:name',
@@ -15,7 +15,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'country',
+    path: 'country/:name',
     loadChildren: () =>
       import('./pages/country/country.module').then((m) => m.CountryModule),
   },
