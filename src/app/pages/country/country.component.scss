@@ -1,0 +1,70 @@
+@import "./../../../assets/styles/colors.scss";
+
+.container {
+  padding-top: 60px;
+
+  .btn-box {
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+
+  .card {
+    margin-bottom: 20px;
+    padding: 0 15px 15px 15px;
+    border: 1px solid $border;
+    border-radius: 10px;
+    box-shadow: 2px 4px 8px $secondary-shadow;
+
+    .title {
+      margin: 30px 0 30px 40px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      h2 {
+        font-size: 48px;
+        color: $primary-gray;
+        letter-spacing: 2px;
+      }
+
+      .image-box {
+        height: 200px;
+        width: 300px;
+        border: 1px solid $border;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          border: 1px solid $border;
+        }
+      }
+    }
+  }
+
+  ul {
+    margin-top: 40px;
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 10px 20px 10px 20px;
+      list-style: none;
+      border: 1px solid $border;
+      border-radius: 8px;
+      padding: 10px 20px;
+      background-color: $border;
+      cursor: pointer;
+    }
+
+    span {
+      font-size: 24px;
+      font-weight: 500;
+    }
+  }
+}

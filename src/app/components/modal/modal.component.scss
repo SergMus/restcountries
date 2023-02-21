@@ -1,0 +1,53 @@
+@import "./../../../assets/styles/colors.scss";
+
+:host {
+  position: absolute;
+}
+
+.outer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+
+  .modal {
+    position: relative;
+    width: 500px;
+    padding: 30px 50px 40px 50px;
+    background-color: $primary-white;
+    border-radius: 8px;
+
+    .close-btn {
+      position: absolute;
+      top: 30px;
+      right: 35px;
+    }
+
+    .wrapper {
+      .inner {
+        .about {
+          margin-top: 20px;
+        }
+
+        .text {
+          margin: 8px 0;
+        }
+
+        .contact {
+          margin-top: 30px;
+          font-weight: 700;
+        }
+
+        & > img {
+          width: 200px;
+          height: 200px;
+        }
+      }
+    }
+  }
+}

@@ -9,6 +9,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { UiModule } from './UI/ui.module';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { UiModule } from './UI/ui.module';
     HeaderComponent,
     BannerComponent,
     FooterComponent,
+    ModalComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],

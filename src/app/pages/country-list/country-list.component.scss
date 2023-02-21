@@ -12,31 +12,35 @@
     height: 70vh;
     margin-top: 20px;
 
-    .viewport {
-      contain: none;
+    cdk-virtual-scroll-viewport {
+      height: 650px;
     }
 
-    li {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin: 10px 20px 10px 0;
-      list-style: none;
-      border: 1px solid $border;
-      border-radius: 8px;
-      padding: 10px 20px;
-      cursor: pointer;
+    .viewport {
+      contain: none;
 
-      .image-box {
-        height: 90px;
-        width: 150px;
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 10px 20px 10px 0;
+        list-style: none;
         border: 1px solid $border;
+        border-radius: 8px;
+        padding: 10px 20px;
+        cursor: pointer;
 
-        img {
-          height: 100%;
-          width: 100%;
-          object-fit: cover;
+        .image-box {
+          height: 90px;
+          width: 150px;
           border: 1px solid $border;
+
+          img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border: 1px solid $border;
+          }
         }
       }
 

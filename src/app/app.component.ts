@@ -9,6 +9,7 @@ import { Location } from '@angular/common';
 export class AppComponent implements OnInit {
   public title: string = 'restcountries';
   public isVisible: boolean = true;
+  public isModal: boolean = false;
 
   constructor(private location: Location) {}
 
@@ -16,5 +17,9 @@ export class AppComponent implements OnInit {
     this.location.onUrlChange(() => {
       this.isVisible = this.location.isCurrentPathEqualTo('');
     });
+  }
+
+  public toggle(): void {
+    this.isModal = !this.isModal;
   }
 }

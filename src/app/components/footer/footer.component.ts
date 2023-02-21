@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent {
-  public onBtnClick(): void {}
+  @Output() onModalToggle = new EventEmitter<boolean>();
+
+  public onBtnClick(): void {
+    this.onModalToggle.emit(true);
+  }
 }

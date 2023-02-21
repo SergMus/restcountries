@@ -3,8 +3,8 @@ import {
   HttpTestingController,
 } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
-import { ICountry } from '../models/country.interface';
-import { COUNTRIES_MOCKS } from '../mocks/country.mocks';
+import { ICountries, ICountry } from '../models/country.interface';
+import { COUNTRIES_MOCKS, COUNTRY_MOCK } from '../mocks/country.mocks';
 import { HttpCountryService } from './http-country.service';
 
 describe('HttpCountryService', () => {
@@ -26,7 +26,7 @@ describe('HttpCountryService', () => {
 
   it('should retrieve countries by region', () => {
     const region = 'europe';
-    const mockCountries: ICountry[] = COUNTRIES_MOCKS;
+    const mockCountries: ICountries[] = COUNTRIES_MOCKS;
 
     service.getCountriesByRegion(region).subscribe((countries) => {
       expect(countries.length).toBe(2);
@@ -39,5 +39,39 @@ describe('HttpCountryService', () => {
     expect(req.request.method).toBe('GET');
 
     req.flush(mockCountries);
+  });
+
+  it('should retrieve one country by name', () => {
+    const mockCountry = COUNTRY_MOCK;
+
+    service.getOneCountry('brazil').subscribe((country) => {
+      expect(country).toEqual([mockCountry]);
+    });
+
+    const req = httpTestingController.expectOne(
+      'https://restcountries.com/v3.1/name/brazil'
+    );
+    expect(req.request.method).toBe('GET');
+    req.flush([mockCountry]);
+  });
+
+  it('should handle error when retrieving one country by name', () => {
+    const mockError = new ErrorEvent('network error');
+    let errorResponse: string;
+
+    service.getOneCountry('invalid').subscribe(
+      () => {},
+      (error: string) => {
+        errorResponse = error;
+        expect(errorResponse).toContain('');
+        expect(errorResponse).toContain('network error');
+        req.error(mockError);
+      }
+    );
+
+    const req = httpTestingController.expectOne(
+      'https://restcountries.com/v3.1/name/invalid'
+    );
+    expect(req.request.method).toBe('GET');
   });
 });
