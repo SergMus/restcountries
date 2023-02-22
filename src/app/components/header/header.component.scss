@@ -1,4 +1,5 @@
 @import "./../../../assets/styles/colors.scss";
+@import "./../../../assets/styles/media-queries.scss";
 
 header {
   max-width: 1320px;
@@ -7,6 +8,10 @@ header {
   align-items: center;
   padding: 20px 0;
   background-color: $primary-white;
+
+  @include for-big-desktop-up {
+    padding: 20px;
+  }
 
   & > h1 {
     font-weight: 600;

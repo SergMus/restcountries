@@ -1,4 +1,5 @@
 @import "./../../../assets/styles/colors.scss";
+@import "./../../../assets/styles/media-queries.scss";
 
 :host {
   position: absolute;
@@ -21,6 +22,10 @@
     padding: 30px 50px 40px 50px;
     background-color: $primary-white;
     border-radius: 8px;
+
+    @include for-tablets {
+      margin: 0 20px;
+    }
 
     .close-btn {
       position: absolute;

@@ -1,4 +1,5 @@
 @import "./../../../assets/styles/colors.scss";
+@import "./../../../assets/styles/media-queries.scss";
 
 footer {
   background-color: $bg-black;
@@ -11,6 +12,10 @@ footer {
     max-width: 1320px;
     margin: 0 auto;
     padding: 20px 0;
+
+    @include for-phone-only {
+      justify-content: space-around;
+    }
   }
 
   .copyright {
@@ -23,10 +28,26 @@ footer {
     height: 22px;
     text-align: center;
     color: $primary-white;
+
+    @include for-tablets {
+      font-size: 14px;
+    }
   }
 
   .btn-wrapper {
     position: absolute;
     right: 0;
+
+    @include for-tablets {
+      font-size: 14px;
+    }
+
+    @include for-big-desktop-up {
+      right: 20px;
+    }
+
+    @include for-phone-only {
+      position: static;
+    }
   }
 }
