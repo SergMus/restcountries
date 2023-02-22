@@ -11,10 +11,13 @@
     @include for-big-desktop-up {
       left: 20px;
     }
+
+    @include for-phone-only {
+      top: 0;
+    }
   }
 
   ul {
-    height: 70vh;
     margin-top: 20px;
 
     cdk-virtual-scroll-viewport {
@@ -55,11 +58,15 @@
             border: 1px solid $border;
           }
         }
-      }
 
-      span {
-        font-size: 24px;
-        font-weight: 500;
+        span {
+          font-size: 24px;
+          font-weight: 500;
+
+          @include for-phone-only {
+            text-align: center;
+          }
+        }
       }
     }
   }

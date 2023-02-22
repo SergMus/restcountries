@@ -26,6 +26,11 @@
     @include for-tablets {
       margin: 0 20px;
     }
+    header {
+      & > h3 {
+        color: silver;
+      }
+    }
 
     .close-btn {
       position: absolute;

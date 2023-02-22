@@ -1,4 +1,5 @@
 @import "./../assets/styles/media-queries.scss";
+@import "./.././assets/styles/media-queries.scss";
 
 main {
   position: relative;
@@ -18,5 +19,9 @@ article {
   @include for-big-desktop-up {
     padding-left: 100px;
     padding-right: 20px;
+  }
+
+  @include for-phone-only {
+    padding: 0 20px;
   }
 }
