@@ -1,4 +1,5 @@
 @import "./../../../assets/styles/colors.scss";
+@import "./../../../assets/styles/media-queries.scss";
 
 section {
   display: flex;
@@ -13,6 +14,10 @@ section {
 
 summary {
   text-align: center;
+
+  @include for-big-desktop-up {
+    padding: 0 20px;
+  }
 
   & > h1 {
     font-weight: 700;

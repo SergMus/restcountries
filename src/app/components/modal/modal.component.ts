@@ -1,4 +1,11 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  EventEmitter,
+  HostListener,
+  Output,
+  ViewChild,
+} from '@angular/core';
 
 @Component({
   selector: 'app-modal',
@@ -6,7 +13,19 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./modal.component.scss'],
 })
 export class ModalComponent {
-  @Output() private isVisible = new EventEmitter<boolean>();
+  @Output() public isVisible = new EventEmitter<boolean>();
+  @ViewChild('modal') public modalWindow?: ElementRef;
+
+  @HostListener('click', ['$event'])
+  public clickOut(event: MouseEvent): void {
+    if (
+      !(this.modalWindow?.nativeElement as HTMLElement).contains(
+        event.target as Element
+      )
+    ) {
+      this.close();
+    }
+  }
 
   public close(): void {
     this.isVisible.emit(false);
