@@ -52,11 +52,26 @@
         .contact {
           margin-top: 30px;
           font-weight: 700;
-        }
 
-        & > img {
-          width: 200px;
-          height: 200px;
+          ul {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 20px;
+
+            li {
+              margin-right: 30px;
+              cursor: pointer;
+
+              @include for-phone-only {
+                margin-right: 10px;
+                margin-bottom: 10px;
+              }
+
+              &:hover {
+                transform: scale(1.05);
+              }
+            }
+          }
         }
       }
     }
