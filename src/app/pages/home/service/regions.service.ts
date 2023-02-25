@@ -6,15 +6,15 @@ export class RegionsData {
   private regions: Region[] = [
     {
       name: 'africa',
-      icon: './../../../assets/images/png/africa.png',
+      icon: './../../../assets/images/webp/africa.webp',
     },
     {
       name: 'americas',
-      icon: './../../../assets/images/png/americas.png',
+      icon: './../../../assets/images/webp/americas.webp',
     },
-    { name: 'asia', icon: './../../../assets/images/png/asia.png' },
-    { name: 'europe', icon: './../../../assets/images/png/europe.png' },
-    { name: 'oceania', icon: './../../../assets/images/png/oceania.png' },
+    { name: 'asia', icon: './../../../assets/images/webp/asia.webp' },
+    { name: 'europe', icon: './../../../assets/images/webp/europe.webp' },
+    { name: 'oceania', icon: './../../../assets/images/webp/oceania.webp' },
   ];
 
   get applyAll(): Region[] {
